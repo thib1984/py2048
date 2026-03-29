@@ -1,20 +1,42 @@
 # Prerequisites
 
-- Install Python 3 for your system
-- Install pip3* for your system
-- Install git for your system
+- Install Python 3 on your system
+- Install pipx on your system
+- Install git on your system
 
+# Why use pipx?
 
-# Installation 
+`pipx` installs Python applications in isolated environments, which prevents dependency conflicts with your system or other projects.  
+It also allows you to run CLI tools globally without polluting your Python installation.  
+This makes it safer and cleaner than using `pip` or `pip3` for installing standalone tools.
 
-``pip3 install py2048``
+# Clean old versions
 
-# Upgrade 
+If you have installed an old version with `pip` or `pip3` (depending on your system), use one of the following commands:
 
-``py2048 -u``
- 
- or
+```
+pip3 uninstall py2048
+pip uninstall py2048
+pip3 uninstall py2048 --break-system-packages
+pip uninstall py2048 --break-system-packages
+```
 
- `` pip3 install --upgrade py2048``
+# Installation
 
-*_Install pip instead of pip3, if pip3 does not exist for your OS_
+```
+pipx install py2048
+```
+
+# Upgrade
+
+```
+pipx upgrade py2048 --include-deps
+```
+
+This command upgrades the application to the latest version and also updates all its dependencies.
+
+# Uninstall
+
+```
+pipx uninstall py2048
+```

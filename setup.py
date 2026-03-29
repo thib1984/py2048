@@ -9,6 +9,7 @@ setup(
     author="thib1984",
     author_email="thibault.garcon@gmail.com",
     license="MIT",
+    license_files="LICENSE.txt",
     packages=["py2048"],
     install_requires=["columnar","termcolor", "colorama"],
     zip_safe=False,
@@ -18,13 +19,9 @@ setup(
         ],
     },
     classifiers=[
-        "Programming Language :: Python :: 3.6",
-        "Programming Language :: Python :: 3.7",
-        "Programming Language :: Python :: 3.8",
-        "Programming Language :: Python :: 3.9",
-        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    python_requires=">=3.6",
+    python_requires=">=3.10",
 )
