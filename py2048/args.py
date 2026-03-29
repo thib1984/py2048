@@ -4,10 +4,21 @@ pygitscrum argparse gestion
 
 import argparse
 import sys
+import importlib.metadata
+
+def get_env_report():
+    lines = []
+
+    lines.append("\nInstalled packages:")
+    for dist in sorted(importlib.metadata.distributions(), key=lambda d: d.metadata["Name"].lower()):
+        name = dist.metadata["Name"]
+        version = dist.version
+        lines.append(f"  - {name}=={version}")
+
+    return "\n".join(lines)    
 
 
-
-class CustomHelpFormatter(argparse.HelpFormatter):
+class CustomHelpFormatter(argparse.RawDescriptionHelpFormatter,argparse.HelpFormatter):
     def _format_action_invocation(self, action):
         if not action.option_strings or action.nargs == 0:
             return super()._format_action_invocation(action)
@@ -31,14 +42,28 @@ def compute_args():
     """
     my_parser = argparse.ArgumentParser(
         description="py2048 game",
-        epilog="""
-        Full documentation at: <https://github.com/thib1984/py2048>.
-        Report bugs to <https://github.com/thib1984/py2048/issues>.
-        MIT Licence.
-        Copyright (c) 2024 thib1984.
-        This is free software: you are free to change and redistribute it.
-        There is NO WARRANTY, to the extent permitted by law.
-        Written by thib1984.""",
+        epilog=f"""
+To upgrade, run:
+    pipx upgrade py2048 --include-deps
+To install, run:
+    pipx install py2048
+To force reinstall, run:
+    pipx install py2048 --force
+To uninstall, run:
+    pipx uninstall py2048
+To force uninstall (if needed), run:
+    pipx uninstall py2048 --force
+
+{get_env_report()}
+
+Full documentation at: <https://github.com/thib1984/py2048>.
+Report bugs to <https://github.com/thib1984/py2048/issues>.
+MIT Licence.
+Copyright (c) 2024 thib1984.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Written by thib1984.
+        """,
         formatter_class=CustomHelpFormatter,
     )
     my_group = my_parser.add_mutually_exclusive_group()

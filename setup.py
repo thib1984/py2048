@@ -2,8 +2,8 @@ from setuptools import setup
 
 setup(
     name="py2048",
-    version="0.1.0",
-    description="py2048 game in terminam",
+    version="0.1.1",
+    description="py2048 game in terminal",
     long_description="The complete description/installation/use/FAQ is available at : https://github.com/thib1984/py2048#readme",
     url="https://github.com/thib1984/py2048",
     author="thib1984",
