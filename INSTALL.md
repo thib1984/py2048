@@ -30,7 +30,8 @@ pipx install py2048
 # Upgrade
 
 ```
-pipx upgrade py2048 --include-deps
+pipx upgrade py2048
+pipx reinstall py2048 #to force update dependencies
 ```
 
 This command upgrades the application to the latest version and also updates all its dependencies.

@@ -44,7 +44,8 @@ def compute_args():
         description="py2048 game",
         epilog=f"""
 To upgrade, run:
-    pipx upgrade py2048 --include-deps
+    pipx upgrade py2048
+    pipx reinstall py2048 #to force update dependencies
 To install, run:
     pipx install py2048
 To force reinstall, run:
