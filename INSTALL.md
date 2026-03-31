@@ -15,23 +15,23 @@ This makes it safer and cleaner than using `pip` or `pip3` for installing standa
 If you have installed an old version with `pip` or `pip3` (depending on your system), use one of the following commands:
 
 ```
-pip3 uninstall py2048
-pip uninstall py2048
-pip3 uninstall py2048 --break-system-packages
-pip uninstall py2048 --break-system-packages
+pip3 uninstall pyterm2048
+pip uninstall pyterm2048
+pip3 uninstall pyterm2048 --break-system-packages
+pip uninstall pyterm2048 --break-system-packages
 ```
 
 # Installation
 
 ```
-pipx install py2048
+pipx install pyterm2048
 ```
 
 # Upgrade
 
 ```
-pipx upgrade py2048
-pipx reinstall py2048 #to force update dependencies
+pipx upgrade pyterm2048
+pipx reinstall pyterm2048 #to force update dependencies
 ```
 
 This command upgrades the application to the latest version and also updates all its dependencies.
@@ -39,5 +39,5 @@ This command upgrades the application to the latest version and also updates all
 # Uninstall
 
 ```
-pipx uninstall py2048
+pipx uninstall pyterm2048
 ```

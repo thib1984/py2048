@@ -2,7 +2,7 @@
 
 Oh if you open this page, it's for contributing for this project, great ! A big thanks 🙏
 
-To contribute, it's simple, check the [existing issues](https://github.com/thib1984/py2048/issues). If you see an issue you are interested to work, please let a message and i assign you the task. With this, all people know you are working on this issue.
+To contribute, it's simple, check the [existing issues](https://github.com/thib1984/pyterm2048/issues). If you see an issue you are interested to work, please let a message and i assign you the task. With this, all people know you are working on this issue.
 
 If it's a new subject, don't hesitate to create an issue. I will check this one to affect some labels and let contribution open 😉
 
@@ -16,35 +16,35 @@ Feel free to reach out if you have any questions. 😁
 
 ```
 # Uninstall the globally installed version via pipx if needed (optional, just to reset the published app)
-pipx uninstall py2048 
+pipx uninstall pyterm2048 
 
 # Clone the repository only the first time
-git clone https://github.com/thib1984/py2048.git
+git clone https://github.com/thib1984/pyterm2048.git
 # Afterwards, update it using regular git commands (git pull, git fetch, etc.)
-cd py2048 
+cd pyterm2048 
 
 # Remove any previous virtual environment to start fresh
-rm -rf py2048_env 
+rm -rf pyterm2048_env 
 
 # Create a virtual environment to isolate dependencies for this project
-python3 -m venv py2048_env
-source py2048_env/bin/activate
+python3 -m venv pyterm2048_env
+source pyterm2048_env/bin/activate
 
 # Install the local package in the isolated environment
 pip install .
 
 # Test the app locally within the virtual environment
-py2048 [...] 
+pyterm2048 [...] 
 
 # Optional: reinstall if needed and retest
 pip install .
-py2048 [...] 
+pyterm2048 [...] 
 
 # Exit the virtual environment
 deactivate
 
 # Reinstall the globally published version via pipx if needed
-pipx install py2048 
+pipx install pyterm2048 
 ``` 
 
 A venv (virtual environment) isolates this project's Python dependencies from the system, preventing version conflicts and keeping things clean.
